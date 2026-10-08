@@ -76,7 +76,7 @@
 
     {{-- Header --}}
     <header class="sticky top-0 z-40 border-b border-line/80 bg-paper/90 backdrop-blur-lg">
-        <div class="wrap flex h-[4.5rem] items-center justify-between gap-6">
+        <div class="wrap flex h-[4.5rem] items-center justify-between gap-4">
             <a href="{{ route('home') }}" class="shrink-0" aria-label="Rachel Agostini home">
                 <x-logo />
             </a>
@@ -157,7 +157,7 @@
                 <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/60">{{ $site['intro'] }}</p>
                 <div class="mt-6 space-y-2 text-sm">
                     <a href="tel:{{ $site['phone_href'] }}" class="flex items-center gap-2.5 text-white/80 hover:text-white"><x-icon name="phone" class="size-4 text-gold-300" /> {{ $site['phone'] }}</a>
-                    <a href="mailto:{{ $site['email'] }}" class="flex items-center gap-2.5 text-white/80 hover:text-white"><x-icon name="mail" class="size-4 text-gold-300" /> {{ $site['email'] }}</a>
+                    <a href="mailto:{{ $site['email'] }}" class="flex items-center gap-2.5 text-white/80 hover:text-white"><x-icon name="mail" class="size-4 shrink-0 text-gold-300" /> <span class="break-all">{{ $site['email'] }}</span></a>
                     <a href="{{ $site['links']['instagram'] }}" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-white/80 hover:text-white"><x-icon name="instagram" class="size-4 text-gold-300" /> {{ $site['social']['instagram_handle'] }}</a>
                     <p class="flex items-center gap-2.5 text-white/60"><x-icon name="map-pin" class="size-4 text-gold-300" /> {{ $site['service_area'] }}</p>
                     <p class="flex items-center gap-2.5 text-white/60"><x-icon name="clock" class="size-4 text-gold-300" /> {{ $site['hours'] }}</p>

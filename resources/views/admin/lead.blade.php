@@ -31,7 +31,7 @@
         </div>
     </form>
 
-    <div class="mt-6 grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+    <div class="mt-6 grid gap-6 *:min-w-0 xl:grid-cols-[1.2fr_0.8fr]">
         <div class="space-y-6">
             {{-- What they sent --}}
             <div class="rounded-3xl bg-white p-6 ring-1 ring-line/70">

@@ -35,7 +35,7 @@
         @endforeach
     </div>
 
-    <div class="mt-6 grid gap-6 xl:grid-cols-[1.4fr_1fr]">
+    <div class="mt-6 grid gap-6 *:min-w-0 xl:grid-cols-[1.4fr_1fr]">
         {{-- Leads per day --}}
         <div class="rounded-3xl bg-white p-6 ring-1 ring-line/70">
             <div class="flex items-center justify-between">
@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    <div class="mt-6 grid gap-6 xl:grid-cols-[1.4fr_1fr]">
+    <div class="mt-6 grid gap-6 *:min-w-0 xl:grid-cols-[1.4fr_1fr]">
         {{-- Hot leads --}}
         <div class="rounded-3xl bg-white p-6 ring-1 ring-line/70">
             <div class="flex items-center justify-between"><h2 class="font-display text-xl font-semibold">Hottest open leads</h2><a href="{{ route('admin.leads', ['status' => 'open', 'sort' => 'score']) }}" class="link-arrow">All open <x-icon name="arrow-right" class="size-3.5" /></a></div>

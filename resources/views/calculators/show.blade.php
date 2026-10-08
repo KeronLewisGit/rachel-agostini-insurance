@@ -113,7 +113,7 @@
                     <div class="relative">
                         @if ($slug === 'life-cover')
                             <p class="text-[11px] font-bold tracking-[0.18em] text-gold-300 uppercase">Recommended life cover</p>
-                            <p class="mt-2 font-display text-5xl font-semibold tracking-tight tabular-nums sm:text-6xl" x-text="money(r.recommendedCover)"></p>
+                            <p class="mt-2 font-display text-4xl font-semibold tracking-tight tabular-nums sm:text-5xl xl:text-6xl" x-text="money(r.recommendedCover)"></p>
                             <p class="mt-3 text-sm text-white/70">Illustrative term premium <strong class="font-bold text-white" x-text="money(r.premiumLow) + ' to ' + money(r.premiumHigh)"></strong> a month. Rachel quotes the real Guardian figure.</p>
                             <div class="mt-6 space-y-3">
                                 <template x-for="[label, amount] in r.breakdown" :key="label">
@@ -126,7 +126,7 @@
                             </div>
                         @elseif ($slug === 'critical-illness')
                             <p class="text-[11px] font-bold tracking-[0.18em] text-gold-300 uppercase">Recommended critical illness cover</p>
-                            <p class="mt-2 font-display text-5xl font-semibold tracking-tight tabular-nums sm:text-6xl" x-text="money(r.recommendedCover)"></p>
+                            <p class="mt-2 font-display text-4xl font-semibold tracking-tight tabular-nums sm:text-5xl xl:text-6xl" x-text="money(r.recommendedCover)"></p>
                             <p class="mt-3 text-sm text-white/70">Paid to you as a tax-free lump sum on diagnosis, under the Guardian Life Phoenix Plan.</p>
                             <div class="mt-6 space-y-3">
                                 <template x-for="[label, amount] in r.breakdown" :key="label">
@@ -139,7 +139,7 @@
                             </div>
                         @elseif ($slug === 'retirement')
                             <p class="text-[11px] font-bold tracking-[0.18em] text-gold-300 uppercase">Projected pot at <span x-text="s.retireAge"></span></p>
-                            <p class="mt-2 font-display text-5xl font-semibold tracking-tight tabular-nums sm:text-6xl" x-text="money(r.pot)"></p>
+                            <p class="mt-2 font-display text-4xl font-semibold tracking-tight tabular-nums sm:text-5xl xl:text-6xl" x-text="money(r.pot)"></p>
                             <p class="mt-3 text-sm text-white/70">Worth about <strong class="font-bold text-white" x-text="money(r.potToday)"></strong> in today's money. Could pay <strong class="font-bold text-white" x-text="money(r.monthlyIncome)"></strong> a month for 25 years.</p>
                             <div class="mt-6 grid grid-cols-2 gap-3">
                                 <div class="rounded-2xl bg-white/10 p-4"><p class="text-[11px] font-bold tracking-wider text-white/60 uppercase">Tax saved this year</p><p class="mt-1 result-num text-gold-300" x-text="money(r.taxSaving)"></p><p class="mt-1 text-xs text-white/60">Net cost <span x-text="money(r.netMonthlyCost)"></span> a month</p></div>
@@ -150,7 +150,7 @@
                             </div>
                         @else
                             <p class="text-[11px] font-bold tracking-[0.18em] text-gold-300 uppercase">Save each month</p>
-                            <p class="mt-2 font-display text-5xl font-semibold tracking-tight tabular-nums sm:text-6xl" x-text="money(r.monthly)"></p>
+                            <p class="mt-2 font-display text-4xl font-semibold tracking-tight tabular-nums sm:text-5xl xl:text-6xl" x-text="money(r.monthly)"></p>
                             <p class="mt-3 text-sm text-white/70">For <span x-text="r.yearsUntil"></span> years, to fund <strong class="font-bold text-white" x-text="s.courseYears + ' years'"></strong> of study costing <strong class="font-bold text-white" x-text="money(r.totalCost)"></strong> in total by then.</p>
                             <div class="mt-6 grid grid-cols-2 gap-3">
                                 <div class="rounded-2xl bg-white/10 p-4"><p class="text-[11px] font-bold tracking-wider text-white/60 uppercase">Annual cost then</p><p class="mt-1 result-num" x-text="money(r.annualFuture)"></p><p class="mt-1 text-xs text-white/60">vs <span x-text="money(r.costToday)"></span> today</p></div>

@@ -24,7 +24,7 @@
             <a href="{{ route('admin.dashboard') }}"><x-logo light compact /></a>
             <span class="rounded-full bg-white/10 px-2.5 py-1 text-[10px] font-bold tracking-widest uppercase">Lead tracker</span>
         </div>
-        <nav class="flex gap-1 overflow-x-auto px-3 pb-3 lg:flex-1 lg:flex-col lg:pb-0" aria-label="Admin">
+        <nav class="flex flex-wrap gap-1 px-3 pb-3 lg:flex-1 lg:flex-col lg:flex-nowrap lg:pb-0" aria-label="Admin">
             @foreach ($links as [$route, $label, $icon, $active, $badge])
                 <a href="{{ route($route) }}" @class(['flex shrink-0 items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-semibold transition', 'bg-white text-ink' => in_array($current, $active), 'text-white/70 hover:bg-white/10 hover:text-white' => ! in_array($current, $active)])>
                     <x-icon :name="$icon" class="size-[18px]" /> {{ $label }}

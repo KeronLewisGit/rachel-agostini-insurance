@@ -12,7 +12,7 @@
                     <p class="text-[11px] font-bold tracking-[0.16em] text-brand-700 uppercase">Get in touch</p>
                     <div class="mt-4 space-y-3 text-sm">
                         <a href="tel:{{ $site['phone_href'] }}" class="flex items-center gap-3 font-semibold hover:text-brand-700"><x-icon name="phone" class="size-4 text-gold-600" /> {{ $site['phone'] }}</a>
-                        <a href="mailto:{{ $site['email'] }}" class="flex items-center gap-3 font-semibold hover:text-brand-700"><x-icon name="mail" class="size-4 text-gold-600" /> {{ $site['email'] }}</a>
+                        <a href="mailto:{{ $site['email'] }}" class="flex items-center gap-3 font-semibold hover:text-brand-700"><x-icon name="mail" class="size-4 shrink-0 text-gold-600" /> <span class="break-all">{{ $site['email'] }}</span></a>
                         <a href="{{ $site['links']['instagram'] }}" target="_blank" rel="noopener" class="flex items-center gap-3 font-semibold hover:text-brand-700"><x-icon name="instagram" class="size-4 text-gold-600" /> {{ $site['social']['instagram_handle'] }}</a>
                     </div>
                     <a href="{{ \App\Support\Content::whatsapp('Hi Rachel, I read your About page and would like to talk.') }}" target="_blank" rel="noopener" class="btn btn-whatsapp mt-5 w-full"><x-icon name="message-circle" class="size-4" /> WhatsApp Rachel</a>

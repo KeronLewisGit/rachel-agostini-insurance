@@ -17,7 +17,7 @@
                         </a>
                         <a href="mailto:{{ $site['email'] }}" class="flex items-center gap-4 rounded-2xl bg-paper p-4 ring-1 ring-line transition hover:bg-brand-50">
                             <span class="grid size-11 place-items-center rounded-xl bg-ink text-white"><x-icon name="mail" class="size-5" /></span>
-                            <span class="min-w-0"><span class="block text-xs font-bold tracking-wider text-muted uppercase">Email</span><span class="block truncate font-bold">{{ $site['email'] }}</span></span>
+                            <span class="min-w-0"><span class="block text-xs font-bold tracking-wider text-muted uppercase">Email</span><span class="block font-bold break-all">{{ $site['email'] }}</span></span>
                         </a>
                         <a href="{{ $site['links']['instagram'] }}" target="_blank" rel="noopener" class="flex items-center gap-4 rounded-2xl bg-paper p-4 ring-1 ring-line transition hover:bg-brand-50">
                             <span class="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-fuchsia-600 to-amber-400 text-white"><x-icon name="instagram" class="size-5" /></span>

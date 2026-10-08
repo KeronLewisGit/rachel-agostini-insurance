@@ -124,6 +124,11 @@
     .wrap {
         @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
     }
+    /* Grid and flex children must be allowed to shrink below their content, or long
+       words and large numbers push the whole page wider than the phone screen. */
+    .wrap > * {
+        min-width: 0;
+    }
     .section {
         @apply py-16 sm:py-24;
     }

@@ -4,7 +4,7 @@
     @unless ($compact)
         <span class="leading-tight">
             <span class="block font-display text-lg font-semibold {{ $light ? 'text-white' : 'text-ink' }}">Rachel Agostini</span>
-            <span class="block text-[11px] font-bold tracking-[0.16em] uppercase {{ $light ? 'text-gold-300' : 'text-brand-700' }}">Guardian Life of the Caribbean</span>
+            <span class="block text-[11px] font-bold tracking-[0.16em] uppercase max-sm:text-[10px] max-sm:tracking-[0.12em] max-[359px]:hidden {{ $light ? 'text-gold-300' : 'text-brand-700' }}">Guardian Life of the Caribbean</span>
         </span>
     @endunless
 </span>
