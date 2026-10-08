@@ -75,3 +75,53 @@ php artisan config:cache && php artisan route:cache && php artisan view:cache   
 ```
 
 Any change to `.env` needs `php artisan config:cache` again, or the old values stay cached.
+
+## After `git clone` into `public_html` (SSH)
+
+Run these in order from hPanel → Advanced → SSH Access (or any SSH client).
+
+```sh
+cd ~/public_html
+
+# 1. Install PHP dependencies (vendor/ is not in git).
+composer install --no-dev --optimize-autoloader --no-interaction
+
+# 2. Create the production .env from the template and generate the app key.
+cp .env.hostinger.example .env
+php artisan key:generate --force
+
+# 3. Fill in the database and mail credentials from hPanel.
+nano .env     # DB_DATABASE, DB_USERNAME, DB_PASSWORD, MAIL_USERNAME, MAIL_PASSWORD, MAIL_FROM_ADDRESS
+
+# 4. Create the tables and Rachel's admin login (prompts for a password).
+php artisan migrate --force
+php artisan site:admin
+
+# 5. Make storage writable and warm the caches.
+chmod -R ug+rwx storage bootstrap/cache
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan optimize
+
+# 6. Confirm.
+php artisan about
+curl -sI https://lightpink-eel-758416.hostingersite.com/.env | head -1   # expect 403
+curl -s  https://lightpink-eel-758416.hostingersite.com/up                # expect OK
+```
+
+If `composer` is not on the path, use `php /usr/local/bin/composer` or upload
+`composer.phar` and run `php composer.phar install --no-dev`.
+
+If `public/build/` is missing after the clone, the assets were not committed:
+run `npm run build` locally, commit `public/build`, push, and `git pull` again.
+
+### Updating later
+
+```sh
+cd ~/public_html
+git pull
+composer install --no-dev --optimize-autoloader --no-interaction
+php artisan migrate --force
+php artisan optimize:clear && php artisan optimize
+```
