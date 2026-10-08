@@ -49,6 +49,8 @@
     <meta name="twitter:image" content="{{ $ogImage }}">
     <meta name="theme-color" content="#0a1430">
     <link rel="icon" type="image/svg+xml" href="{{ asset('images/mark.svg') }}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}">
     <link rel="sitemap" type="application/xml" href="{{ route('sitemap') }}">
     <script type="application/ld+json">{!! json_encode($jsonLd, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
     @fonts
