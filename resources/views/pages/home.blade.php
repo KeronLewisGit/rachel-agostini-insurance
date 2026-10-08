@@ -30,9 +30,12 @@
                 </dl>
             </div>
             <div class="relative mx-auto w-full max-w-md lg:max-w-none">
-                <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-brand-700 to-brand-950 shadow-glow ring-1 ring-white/10">
-                    <img src="{{ asset('images/rachel-agostini.webp') }}" alt="Rachel Agostini, Guardian Life of the Caribbean sales representative in Trinidad and Tobago" class="h-full w-full object-cover object-top" width="500" height="815" fetchpriority="high">
-                    <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/80 to-transparent"></div>
+                <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem]">
+                    {{-- Soft glow behind the cut-out portrait so it sits in the hero rather than on a card. --}}
+                    <div class="absolute top-[12%] left-1/2 h-[70%] w-[80%] -translate-x-1/2 rounded-full bg-accent-600/35 blur-3xl" aria-hidden="true"></div>
+                    <div class="absolute bottom-0 left-1/2 h-[45%] w-[90%] -translate-x-1/2 rounded-full bg-brand-600/40 blur-3xl" aria-hidden="true"></div>
+                    <img src="{{ asset('images/rachel-agostini-cutout.webp') }}" alt="Rachel Agostini, Guardian Life of the Caribbean sales representative in Trinidad and Tobago" class="relative h-full w-full object-cover object-top" width="500" height="815" fetchpriority="high">
+                    <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/70 to-transparent"></div>
                     <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
                         <div>
                             <p class="font-display text-2xl font-semibold">Rachel Agostini</p>
