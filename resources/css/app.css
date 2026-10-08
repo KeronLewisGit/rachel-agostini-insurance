@@ -9,39 +9,50 @@
     --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
 
-    /* Guardian blue, deepened for authority */
-    --color-brand-50: #eef3ff;
-    --color-brand-100: #dbe6ff;
-    --color-brand-200: #bdd0ff;
-    --color-brand-300: #8fb0ff;
-    --color-brand-400: #5a84fb;
-    --color-brand-500: #2f5cf0;
-    --color-brand-600: #1c43d6;
-    --color-brand-700: #1734ad;
-    --color-brand-800: #182e8a;
-    --color-brand-900: #182a6d;
-    --color-brand-950: #0f1a46;
+    /* Guardian Group purple (secondary colour on myguardiangroup.com, #31006f) */
+    --color-brand-50: #f7f2fa;
+    --color-brand-100: #f0e8f5;
+    --color-brand-200: #dfd0ee;
+    --color-brand-300: #c3a9e0;
+    --color-brand-400: #9f7bcb;
+    --color-brand-500: #7a4fb3;
+    --color-brand-600: #5c2c9a;
+    --color-brand-700: #471486;
+    --color-brand-800: #31006f;
+    --color-brand-900: #26005a;
+    --color-brand-950: #170038;
 
-    /* Warm gold, from the peach band on Rachel's flyers */
-    --color-gold-50: #fff8ec;
-    --color-gold-100: #ffeecb;
-    --color-gold-200: #ffd98f;
-    --color-gold-300: #f9c261;
-    --color-gold-400: #f2a73a;
-    --color-gold-500: #e68a1a;
-    --color-gold-600: #c46c0f;
-    --color-gold-700: #9c5210;
+    /* Guardian Group magenta (primary colour on myguardiangroup.com, #9c0059) */
+    --color-accent-50: #fdf0f6;
+    --color-accent-100: #fadbe9;
+    --color-accent-200: #f5b3d1;
+    --color-accent-300: #ea7aae;
+    --color-accent-400: #d7408a;
+    --color-accent-500: #b8166d;
+    --color-accent-600: #9c0059;
+    --color-accent-700: #7d004a;
+    --color-accent-800: #5e0038;
 
-    --color-ink: #0a1430;
-    --color-ink-soft: #16224a;
-    --color-paper: #f7f8fc;
-    --color-paper-deep: #edf0f7;
-    --color-line: #dfe4ef;
-    --color-muted: #5a6478;
+    /* Guardian Group orange (tertiary colour on myguardiangroup.com, #e86d1f) */
+    --color-gold-50: #fff5ec;
+    --color-gold-100: #ffe8d2;
+    --color-gold-200: #ffcfa3;
+    --color-gold-300: #ffb270;
+    --color-gold-400: #f58c3e;
+    --color-gold-500: #e86d1f;
+    --color-gold-600: #c55414;
+    --color-gold-700: #9c4012;
 
-    --shadow-card: 0 1px 2px rgb(10 20 48 / 0.04), 0 10px 30px -14px rgb(10 20 48 / 0.16);
-    --shadow-lift: 0 2px 4px rgb(10 20 48 / 0.05), 0 28px 56px -24px rgb(10 20 48 / 0.35);
-    --shadow-glow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 30px 80px -30px rgb(47 92 240 / 0.55);
+    --color-ink: #1a0b3a;
+    --color-ink-soft: #2a1458;
+    --color-paper: #fbf9fd;
+    --color-paper-deep: #f0e8f5;
+    --color-line: #e4dcee;
+    --color-muted: #6a5a8a;
+
+    --shadow-card: 0 1px 2px rgb(49 0 111 / 0.04), 0 10px 30px -14px rgb(49 0 111 / 0.16);
+    --shadow-lift: 0 2px 4px rgb(49 0 111 / 0.05), 0 28px 56px -24px rgb(49 0 111 / 0.35);
+    --shadow-glow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 30px 80px -30px rgb(156 0 89 / 0.55);
 
     --animate-marquee: marquee 48s linear infinite;
     --animate-float: float 7s ease-in-out infinite;
@@ -252,10 +263,10 @@
         background-size: 22px 22px;
     }
     .glow-brand {
-        background: radial-gradient(60% 60% at 70% 30%, rgb(47 92 240 / 0.45), transparent 70%);
+        background: radial-gradient(60% 60% at 70% 30%, rgb(156 0 89 / 0.45), transparent 70%);
     }
     .glow-gold {
-        background: radial-gradient(50% 50% at 30% 80%, rgb(242 167 58 / 0.3), transparent 70%);
+        background: radial-gradient(50% 50% at 30% 80%, rgb(232 109 31 / 0.3), transparent 70%);
     }
     .stat-num {
         @apply font-display text-4xl font-semibold tracking-tight tabular-nums sm:text-5xl;

@@ -47,7 +47,7 @@
     <meta name="twitter:title" content="{{ $pageTitle }}">
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
-    <meta name="theme-color" content="#0a1430">
+    <meta name="theme-color" content="#1a0b3a">
     <link rel="icon" type="image/svg+xml" href="{{ asset('images/mark.svg') }}">
     <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('favicon.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}">
@@ -61,11 +61,12 @@
 
     {{-- Utility bar --}}
     <div class="bg-ink text-white">
-        <div class="wrap flex h-10 items-center justify-between gap-4 text-xs">
-            <p class="flex min-w-0 items-center gap-2 text-white/70">
-                <x-icon name="badge-check" class="size-3.5 shrink-0 text-gold-300" />
-                <span class="truncate">Guardian Life of the Caribbean sales representative <span class="hidden sm:inline">&middot; Central Bank registered &middot; TTAIFA National Awardee 2024</span></span>
-            </p>
+        <div class="wrap flex h-11 items-center justify-between gap-4 text-xs">
+            <div class="flex min-w-0 items-center gap-3 text-white/70">
+                <x-guardian-logo light class="h-7" />
+                <span class="hidden h-4 w-px bg-white/20 sm:block"></span>
+                <span class="hidden truncate sm:inline">Sales representative <span class="hidden md:inline">&middot; Central Bank registered &middot; TTAIFA National Awardee 2024</span></span>
+            </div>
             <div class="flex shrink-0 items-center gap-5">
                 <a href="mailto:{{ $site['email'] }}" class="hidden items-center gap-1.5 text-white/80 transition hover:text-white md:flex"><x-icon name="mail" class="size-3.5" /> {{ $site['email'] }}</a>
                 <a href="tel:{{ $site['phone_href'] }}" class="hidden items-center gap-1.5 font-semibold transition hover:text-gold-300 sm:flex"><x-icon name="phone" class="size-3.5" /> {{ $site['phone'] }}</a>
@@ -140,6 +141,10 @@
                     <a href="{{ route('quote') }}" class="btn btn-gold">Get a quote</a>
                     <a href="{{ $whatsapp }}" class="btn btn-whatsapp" target="_blank" rel="noopener"><x-icon name="message-circle" class="size-4" /> WhatsApp {{ $site['phone'] }}</a>
                 </div>
+                <div class="mt-8 flex items-center gap-3 border-t border-white/10 pt-6 text-xs text-white/60">
+                    <x-guardian-logo light class="h-8" />
+                    <span>Guardian Life of the Caribbean sales representative</span>
+                </div>
             </nav>
         </div>
     </div>
@@ -155,6 +160,10 @@
             <div>
                 <x-logo light />
                 <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/60">{{ $site['intro'] }}</p>
+                <div class="mt-6 flex items-center gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                    <x-guardian-logo light class="h-10" />
+                    <p class="text-xs leading-relaxed text-white/60">Sales representative of Guardian Life of the Caribbean Limited, a member of <a href="{{ $site['links']['guardian'] }}" target="_blank" rel="noopener" class="font-semibold text-white/80 hover:text-white">Guardian Group</a>.</p>
+                </div>
                 <div class="mt-6 space-y-2 text-sm">
                     <a href="tel:{{ $site['phone_href'] }}" class="flex items-center gap-2.5 text-white/80 hover:text-white"><x-icon name="phone" class="size-4 text-gold-300" /> {{ $site['phone'] }}</a>
                     <a href="mailto:{{ $site['email'] }}" class="flex items-center gap-2.5 text-white/80 hover:text-white"><x-icon name="mail" class="size-4 shrink-0 text-gold-300" /> <span class="break-all">{{ $site['email'] }}</span></a>
